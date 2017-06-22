@@ -13,6 +13,10 @@
 		CCB6ABA11EF3CFE30000249C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB6AB9F1EF3CFE30000249C /* Main.storyboard */; };
 		CCB6ABA31EF3CFE30000249C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCB6ABA21EF3CFE30000249C /* Assets.xcassets */; };
 		CCB6ABA61EF3CFE30000249C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB6ABA41EF3CFE30000249C /* LaunchScreen.storyboard */; };
+		CCB6ABB61EF3D03B0000249C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB6ABB51EF3D03B0000249C /* CloudKit.framework */; };
+		CCB6ABB91EF3D0700000249C /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB6ABB81EF3D0700000249C /* UserInfoModel.m */; };
+		CCB6ABBB1EF3DC3A0000249C /* beauty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCB6ABBA1EF3DC3A0000249C /* beauty.jpg */; };
+		CCB6ABBD1EF3E1020000249C /* yaoyiyao_content_0.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB6ABBC1EF3E1020000249C /* yaoyiyao_content_0.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,12 @@
 		CCB6ABA21EF3CFE30000249C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCB6ABA51EF3CFE30000249C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCB6ABA71EF3CFE30000249C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCB6ABAD1EF3CFFC0000249C /* iCloudKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCloudKitDemo.entitlements; sourceTree = "<group>"; };
+		CCB6ABB51EF3D03B0000249C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		CCB6ABB71EF3D0700000249C /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		CCB6ABB81EF3D0700000249C /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
+		CCB6ABBA1EF3DC3A0000249C /* beauty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beauty.jpg; sourceTree = "<group>"; };
+		CCB6ABBC1EF3E1020000249C /* yaoyiyao_content_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yaoyiyao_content_0.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB6ABB61EF3D03B0000249C /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +55,7 @@
 			children = (
 				CCB6AB951EF3CFE30000249C /* iCloudKitDemo */,
 				CCB6AB941EF3CFE30000249C /* Products */,
+				CCB6ABAE1EF3CFFD0000249C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +70,12 @@
 		CCB6AB951EF3CFE30000249C /* iCloudKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CCB6ABAD1EF3CFFC0000249C /* iCloudKitDemo.entitlements */,
+				CCB6ABBC1EF3E1020000249C /* yaoyiyao_content_0.png */,
+				CCB6ABBA1EF3DC3A0000249C /* beauty.jpg */,
 				CCB6AB991EF3CFE30000249C /* AppDelegate.h */,
+				CCB6ABB71EF3D0700000249C /* UserInfoModel.h */,
+				CCB6ABB81EF3D0700000249C /* UserInfoModel.m */,
 				CCB6AB9A1EF3CFE30000249C /* AppDelegate.m */,
 				CCB6AB9C1EF3CFE30000249C /* ViewController.h */,
 				CCB6AB9D1EF3CFE30000249C /* ViewController.m */,
@@ -77,6 +94,14 @@
 				CCB6AB971EF3CFE30000249C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCB6ABAE1EF3CFFD0000249C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCB6ABB51EF3D03B0000249C /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +137,14 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4GB3PHABNJ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -139,8 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB6ABA61EF3CFE30000249C /* LaunchScreen.storyboard in Resources */,
+				CCB6ABBD1EF3E1020000249C /* yaoyiyao_content_0.png in Resources */,
 				CCB6ABA31EF3CFE30000249C /* Assets.xcassets in Resources */,
 				CCB6ABA11EF3CFE30000249C /* Main.storyboard in Resources */,
+				CCB6ABBB1EF3DC3A0000249C /* beauty.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +188,7 @@
 			files = (
 				CCB6AB9E1EF3CFE30000249C /* ViewController.m in Sources */,
 				CCB6AB9B1EF3CFE30000249C /* AppDelegate.m in Sources */,
+				CCB6ABB91EF3D0700000249C /* UserInfoModel.m in Sources */,
 				CCB6AB981EF3CFE30000249C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,10 +309,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iCloudKitDemo/iCloudKitDemo.entitlements;
 				DEVELOPMENT_TEAM = 4GB3PHABNJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iCloudKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MeiQi.iCloudKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lianyun.iCloudTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -285,10 +327,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iCloudKitDemo/iCloudKitDemo.entitlements;
 				DEVELOPMENT_TEAM = 4GB3PHABNJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iCloudKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MeiQi.iCloudKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lianyun.iCloudTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
